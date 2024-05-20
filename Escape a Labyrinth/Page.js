@@ -68,7 +68,7 @@ function escapeLabyrinth(map) {
 }
 
 // Some scenarios
-console.log(solution([
+console.log(escapeLabyrinth([
     [0, 0, 0, 0, 0, 0],
     [1, 1, 1, 1, 1, 0],
     [0, 0, 0, 0, 0, 0],
@@ -77,14 +77,14 @@ console.log(solution([
     [0, 0, 0, 0, 0, 0]
 ])); // Returns 11
 
-console.log(solution([
+console.log(escapeLabyrinth([
     [0, 1, 1, 0],
     [0, 0, 0, 1],
     [1, 1, 0, 0],
     [1, 1, 1, 0]
 ])); // Returns 7
 
-console.log(solution([
+console.log(escapeLabyrinth([
     [0, 0, 1],
     [0, "a", 0]
 ])); // Returns "Error: Input map must be a 2D array with dimensions between 2 and 20."

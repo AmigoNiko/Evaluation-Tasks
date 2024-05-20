@@ -1,5 +1,5 @@
 function isValidInput(n) {
-	return typeof n === 'number' && Number.isInteger(n) && n > 0;
+	return Number.isInteger(n) && n > 0;
 }
 
 function calculateSteps(n) {
@@ -15,11 +15,11 @@ function integerConversion(n) {
     if (!isValidInput(n)) {
         return "Error: Input must be a positive integer.";
     }
-   return calculateSteps(n)
+   return calculateSteps(n);
 }
 
 // Some scenarios
-console.log(solution(4));  // Returns 2
-console.log(solution(15)); // Returns 5
-console.log(solution(-5)); // Returns "Error: Input must be a positive integer."
-console.log(solution("15")); //Returns "Error: Input must be a positive integer."
+console.log(integerConversion(4));  // Returns 2
+console.log(integerConversion(15)); // Returns 5
+console.log(integerConversion(-5)); // Returns "Error: Input must be a positive integer."
+console.log(integerConversion("15")); //Returns "Error: Input must be a positive integer."
