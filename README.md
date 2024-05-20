@@ -1,13 +1,19 @@
 Overview
+
 This repository contains solutions to three tasks for evaluating the skills needed for an Adserver Javascript developer position. Each task is implemented in JavaScript and includes error handling to ensure robustness against incorrect inputs. Below is a detailed description of each task along with usage instructions.
 
 Tasks
+
 Task 1: Efficient Integer Conversion
 The goal is to create a function that converts a positive integer to 1 using the least number of steps. The allowed operations are:
 
-Add One
-Remove One
-Divide by 2 (only if the current number is even)
+-Add One
+
+-Remove One
+
+-Divide by 2 (only if the current number is even)
+
+
 Function: solution(n)
 
 Parameters:
