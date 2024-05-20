@@ -1,57 +1,100 @@
-Overview
+# Evaluation Tasks for Adserver
 
-This repository contains solutions to three tasks for evaluating the skills needed for an Adserver Javascript developer position. Each task is implemented in JavaScript and includes error handling to ensure robustness against incorrect inputs. Below is a detailed description of each task along with usage instructions.
+## Javascript Developer Position
 
-Tasks
+In order to evaluate the skills needed for the Adserver Javascript developer position, we request
+applicants to provide solutions for the following tasks, together with several test scenarios that
+prove their solution.
 
-Task 1: Efficient Integer Conversion
-The goal is to create a function that converts a positive integer to 1 using the least number of steps. The allowed operations are:
+## Task.01 - Efficient Integer Conversion
 
--Add One
+Create a function called, that accepts a positive integer and converts it into 1 in the most
+effective way possible. The function should return the number of steps executed. You can use
+only these three possible operations to convert the integer into 1:
 
--Remove One
+1. Add One
+2. Remove One
+3. Divide by 2 (only if the current amount is even)
 
--Divide by 2 (only if the current number is even)
+## Task.02 - Escape a labyrinth
 
+You have a labyrinth. The map is represented as a matrix of 0s and 1s, where 0s are passable
+space and 1s are impassable walls. The door out of the labyrinth is at the top left (0,0) and the door
+into the labyrinth is at the bottom right (w-1,h-1).
 
-Function: solution(n)
+Write a function solution(map) that generates the length of the shortest path from the entry point to
+the exit, where you are allowed to remove one wall as part of your strategy. The path length is the
+total number of nodes you pass through, counting both the entrance and exit. The starting and
+ending positions are always passable (0). The map will always be solvable, though you may or may
+not need to remove a wall to solve it. The height and width of the map can be from 2 to 20. Moves
+can only be made in cardinal directions; no diagonal moves are allowed.
 
-Parameters:
+```bash
+[
+   [0, 0, 0, 0, 0, 0], 
+   [1, 1, 1, 1, 1, 0], 
+   [0, 0, 0, 0, 0, 0], 
+   [0, 1, 1, 1, 1, 1], 
+   [0, 1, 1, 1, 1, 1],
+   [0, 0, 0, 0, 0, 0]
+]
+```
 
-n (integer): A positive integer to be converted to 1.
-Returns:
+Should Output: 11
 
-Number of steps to convert the integer to 1, or an error message if the input is invalid.
+Input with matrix
 
-Task 2: Escape a Labyrinth
-The objective is to find the shortest path from the bottom right to the top left of a labyrinth, represented as a 2D array, where one wall can be removed to facilitate the escape.
+```bash
+[
+   [0, 1, 1, 0],
+   [0, 0, 0, 1],
+   [1, 1, 0, 0],
+   [1, 1, 1, 0]
+]
+```
 
-Function: solution(map)
+Should Output: 7
 
-Parameters:
+## Task.03 - JavaScript DOM Manipulation
 
-map (2D array): A matrix where 0s are passable spaces and 1s are impassable walls.
-Returns:
+### Description
 
-Length of the shortest path from the entrance to the exit, considering one wall removal, or an error message if the input is invalid.
+You're tasked with developing a JavaScript function that manipulates the Document Object
+Model (DOM) of any webpage to create a simplified and structured view. The function should
+perform the following actions:
 
-Task 3: JavaScript DOM Manipulation
-The aim is to create a function that manipulates the DOM of a webpage to create a simplified and structured view by removing multimedia content and CSS styles, and organizing textual content into div elements with banners inserted between them.
+- Remove all multimedia content (images, videos, iframes) and CSS styles on the page
+- Retrieve all elements from the page and put their textual content in a simple div element.
+- Set the width of each div element to match the width of the screen.
+- Insert a Sample banner element with size (728x90) between each DIV with content of your choice
 
-Function: simplifyPage()
+### Requirements
 
-Description:
+- Use vanilla JavaScript to achieve the specified functionality. Do not rely on any libraries or
+frameworks.
+- Ensure that only div elements are left on the page after the manipulation.
+- The code should handle scenarios where different elements may contain nested multimedia
+content and CSS styles gracefully.
+- Ensure that after applying the function, the webpage contains only the div elements with each
+div spanning the width of the screen + the added banners.
+- Document your code to explain its purpose and any assumptions made.
 
-Removes all CSS styles from the page.
-Removes all multimedia content (images, videos, iframes).
-Retrieves all textual content and places it into separate div elements.
-Inserts a 728x90 banner between each div element.
+### Example
 
-Requirements
-Ensure JavaScript is enabled in your environment or browser.
-The DOM manipulation function should be included and called within a browser context.
+Given an HTML page with various content, including elements containing textual content,
+images, videos, and iframes, applying the function should result in the following:
 
-Notes
-Each task includes error handling to provide informative error messages when the input is invalid.
-Ensure that the inputs adhere to the expected types and formats to avoid errors.
-Feel free to test each function with different inputs to understand their functionality and error handling capabilities.
+- Multimedia content (images, videos, iframes) and CSS styles are removed.
+- The textual content is placed in different div elements.
+- All other content on the webpage is cleared, leaving only the div elements with each div
+spanning the width of the screen.
+- A banner with size of 728x90 is placed between each individual DIV element
+
+### Additional Information
+
+This task evaluates the candidate's proficiency in:
+
+- DOM manipulation using vanilla JavaScript.
+- Handling and traversing DOM elements effectively.
+- Understanding and implementing client-side responsiveness.
+- Ensuring graceful handling of various scenarios and edge cases.
